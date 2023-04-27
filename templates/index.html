@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block css_link %}
+    <link rel="stylesheet" href="../static/css/Index.css" type="text/css">
+{% endblock %}
+
+{% block content %}
+    {% for book in books %}
+        <div class="book_view">
+            <h3>#{{ book[0] }} - {{ book[1] }}</h3>
+            <h4>Author: {{ book[2] }}</h4>
+            <p>{{ book[3] }}</p>
+            <p>{{ book[4] }}</p>
+            <hr>
+            <p>Date: {{ book[5] }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

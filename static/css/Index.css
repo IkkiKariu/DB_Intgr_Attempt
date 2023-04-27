@@ -1,0 +1,8 @@
+.book_view {
+    margin: 10px;
+    background-color: aliceblue;
+}
+
+.book_view * {
+    margin: 10px;
+}

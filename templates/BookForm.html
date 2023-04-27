@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="frm">
+        <form action="/book_form/" method="POST">
+            {{ form.title.label }}
+            {{ form.title }}
+            {{ form.author.label }}
+            {{ form.author }}
+            {{ form.review.label }}
+            {{ form.review }}
+            {{ form.pages_num.label }}
+            {{ form.pages_num }}
+            {{ form.submit }}
+        </form>
+    </div>
+
+{% endblock %}
