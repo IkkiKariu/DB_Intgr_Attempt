@@ -24,6 +24,13 @@ cur.execute('INSERT INTO books1 (title, review, author, pages_num )'
              432)
             )
 
+cur.execute('DROP TABLE IF EXISTS users')
+cur.execute('CREATE TABLE users('
+            'id serial primary key,'
+            'login varchar(255) NOT NULL,'
+            'password varchar(255) NOT NULL,'
+            'email varchar(150) NOT NULL);')
+
 conn.commit()
 cur.close()
 conn.close()

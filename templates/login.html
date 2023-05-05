@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class = "content_header" align="center">LOGIN</h1>
+    <div class="reg_form">
+        <form action="/login/" method="POST">
+            {{ form.login.label }}
+            {{ form.login }}
+            {{ form.password.label }}
+            {{ form.password }}
+            {{ form.submit }}
+        </form>
+
+        {% for msg in get_flashed_messages() %}
+        <p>{{ msg }}</p>
+        {% endfor %}
+    </div>
+{% endblock %}
